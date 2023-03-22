@@ -1,0 +1,25 @@
+button {
+  background: dodgerblue;
+  border: none;
+  color: white;
+  margin: 10px 2px;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.export-btn {
+  background: gray;
+}
+
+.settings-btn {
+  background: green;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+.timer-btn {
+  background: red;
+}
