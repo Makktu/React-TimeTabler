@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 
 const TheTable = () => {
-  // identify day of the week and highlight it
-
   useEffect(() => {
+    // identify day of the week and highlight it
     const weekday = [
       "Sunday",
       "Monday",
@@ -18,6 +17,8 @@ const TheTable = () => {
     let todayColumn = document.getElementById(thisDay);
     todayColumn.classList.add("today");
   }, []);
+
+  // *_*
 
   return (
     <>
@@ -34,7 +35,7 @@ const TheTable = () => {
         </colgroup>
         <tbody>
           <tr>
-            <td>&nbsp;</td>
+            <td></td>
             <th>Mon</th>
             <th>Tues</th>
             <th>Wed</th>
@@ -58,151 +59,151 @@ const TheTable = () => {
             <th>11:00</th>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>12:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>13:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>14:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>15:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>16:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>17:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>18:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>19:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>20:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>21:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>22:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>23:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>00:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th>01:00</th>
-            <td>&nbsp;</td>
-            <td></td>
-            <td>&nbsp;</td>
             <td></td>
             <td></td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
