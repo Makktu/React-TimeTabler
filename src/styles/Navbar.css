@@ -1,3 +1,36 @@
 .navLabel {
   margin-left: 20px;
 }
+
+.pick-orangered {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: orangered;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.pick-yellow {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: yellow;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.pick-cyan {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: cyan;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.pick-gray {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: gray;
+  margin-left: 10px;
+  cursor: pointer;
+}
