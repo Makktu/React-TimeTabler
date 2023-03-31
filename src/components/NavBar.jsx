@@ -2,7 +2,14 @@ import Button from "./Button";
 
 import "../styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const handleColorChangeClick = (e) => {
+    // props.currentCellColor = e.target.className.split("-")[1];
+    props.setCurrentCellColor(e.target.className.split("-")[1]);
+    console.log("Changed to ", props.currentCellColor);
+    // console.log(e.target.className.split("-")[1]);
+  };
+
   const clickHandler = (e) => {
     console.log(e.target.className);
     if (e.target.className === "timer-btn") {
@@ -20,10 +27,10 @@ const Navbar = () => {
       <Button buttonText="NEW WEEK" />
       <Button style="timer-btn" buttonText="TIMER" onClick={clickHandler} />
       <label className="navLabel">Cell Color: </label>
-      <span className="pick-orangered"></span>
-      <span className="pick-yellow"></span>
-      <span className="pick-cyan"></span>
-      <span className="pick-gray"></span>
+      <span onClick={handleColorChangeClick} className="pick-orangered"></span>
+      <span onClick={handleColorChangeClick} className="pick-yellow"></span>
+      <span onClick={handleColorChangeClick} className="pick-cyan"></span>
+      <span onClick={handleColorChangeClick} className="pick-gray"></span>
       <Button style="settings-btn" buttonText="SETTINGS" />
     </>
   );

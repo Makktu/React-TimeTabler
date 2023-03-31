@@ -7,11 +7,18 @@ import TheTable from "./components/TheTable";
 import "./styles/App.css";
 
 const App = () => {
+  const [currentCellColor, setCurrentCellColor] = useState("");
   return (
     <>
       <Header />
-      <Navbar />
-      <TheTable />
+      <Navbar
+        currentCellColor={currentCellColor}
+        setCurrentCellColor={setCurrentCellColor}
+      />
+      <TheTable
+        currentCellColor={currentCellColor}
+        setCurrentCellColor={setCurrentCellColor}
+      />
     </>
   );
 };
