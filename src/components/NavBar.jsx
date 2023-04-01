@@ -4,14 +4,11 @@ import "../styles/Navbar.css";
 
 const Navbar = (props) => {
   const handleColorChangeClick = (e) => {
-    // props.currentCellColor = e.target.className.split("-")[1];
+    console.log(e.target.className.split("-")[1]);
     props.setCurrentCellColor(e.target.className.split("-")[1]);
-    console.log("Changed to ", props.currentCellColor);
-    // console.log(e.target.className.split("-")[1]);
   };
 
   const clickHandler = (e) => {
-    console.log(e.target.className);
     if (e.target.className === "timer-btn") {
       alert("Timer functionality coming in a later version");
     }

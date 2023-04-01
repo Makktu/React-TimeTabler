@@ -4,8 +4,6 @@ import "../styles/TheTable.css";
 
 const TheTable = (props) => {
   useEffect(() => {
-    // identify day of the week and highlight it
-
     // const allCells = document.getElementsByTagName("td");
     // [...allCells].forEach((cell, ind) => {
     //   cell.classList.add("active-timetable-cell");
@@ -18,6 +16,8 @@ const TheTable = (props) => {
     //     console.log("CLICKED");
     //   });
     // });
+
+    // identify day of the week and highlight it
 
     const weekday = [
       "Sunday",
@@ -76,13 +76,31 @@ const TheTable = (props) => {
               onClick={handleCellClick}
               className={props.currentCellColor}
             ></td>
-            <td></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
 
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
+            <td
+              onClick={handleCellClick}
+              className={props.currentCellColor}
+            ></td>
           </tr>
           <tr>
             <th>11:00</th>
