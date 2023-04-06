@@ -3,6 +3,24 @@ import { useEffect, useState } from "react";
 import "../styles/TheTable.css";
 
 const TheTable = (props) => {
+  const theHours = [
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+    "23:00",
+    "00:00",
+    "01:00",
+  ];
   useEffect(() => {
     // const allCells = document.getElementsByTagName("td");
     // [...allCells].forEach((cell, ind) => {
@@ -59,6 +77,28 @@ const TheTable = (props) => {
           <col id="Saturday" />
           <col id="Sunday" />
         </colgroup>
+        <tbody>
+          <tr>
+            <td></td>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+          {theHours.forEach((hour) => {
+            return (
+              <tr>
+                <th>{hour}</th>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      {/* <table>
+        
         <tbody>
           <tr>
             <td></td>
@@ -253,7 +293,7 @@ const TheTable = (props) => {
             <td></td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
     </>
   );
 };
