@@ -21,6 +21,7 @@ const TheTable = (props) => {
     "00:00",
     "01:00",
   ];
+  const theDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   useEffect(() => {
     // const allCells = document.getElementsByTagName("td");
     // [...allCells].forEach((cell, ind) => {
@@ -80,15 +81,11 @@ const TheTable = (props) => {
         <tbody>
           <tr>
             <td></td>
-            <th>Mon</th>
-            <th>Tues</th>
-            <th>Wed</th>
-            <th>Thurs</th>
-            <th>Fri</th>
-            <th>Sat</th>
-            <th>Sun</th>
+            {theDays.map((day) => {
+              return <th>{day}</th>;
+            })}
           </tr>
-          {theHours.forEach((hour) => {
+          {theHours.map((hour) => {
             return (
               <tr>
                 <th>{hour}</th>
