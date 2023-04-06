@@ -65,6 +65,14 @@ const TheTable = (props) => {
     }
   };
 
+  const addCells = () => {
+    let newRow = [];
+    for (let a = 1; a < 7; a++) {
+      newRow.push(`<td onClick={() => console.log("clicked!")}></td>`);
+    }
+    return newRow;
+  };
+
   return (
     <>
       <table>
@@ -89,6 +97,7 @@ const TheTable = (props) => {
             return (
               <tr>
                 <th>{hour}</th>
+                {addCells}
               </tr>
             );
           })}
