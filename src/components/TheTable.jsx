@@ -24,6 +24,10 @@ const TheTable = (props) => {
   const theDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   useEffect(() => {
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      addText(e);
+    });
     // identify day of the week and highlight it
     const weekday = [
       "Sunday",
@@ -39,6 +43,12 @@ const TheTable = (props) => {
     let todayColumn = document.getElementById(thisDay);
     todayColumn.classList.add("today");
   }, []);
+
+  const addText = (e) => {
+    // check that the right-click is on a timetable cell -- if not, ignore it
+    let newText = prompt("Add text");
+    e.target.innerText = newText;
+  };
 
   // *_*
 
@@ -66,14 +76,14 @@ const TheTable = (props) => {
         <tbody>
           <tr>
             <td></td>
-            {theDays.map((day) => {
-              return <th>{day}</th>;
+            {theDays.map((day, ind) => {
+              return <th key={ind}>{day}</th>;
             })}
           </tr>
-          {theHours.map((hour) => {
+          {theHours.map((hour, ind) => {
             return (
               <tr>
-                <th>{hour}</th>
+                <th key={ind}>{hour}</th>
                 <td onClick={handleClick}></td>
                 <td onClick={handleClick}></td>
                 <td onClick={handleClick}></td>

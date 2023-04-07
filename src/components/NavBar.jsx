@@ -3,9 +3,9 @@ import Button from "./Button";
 import "../styles/Navbar.css";
 
 const Navbar = (props) => {
-  const handleColorChangeClick = (e) => {
-    console.log(e.target.className.split("-")[1]);
-    props.setCurrentCellColor(e.target.className.split("-")[1]);
+  const handleColorChangeClick = (newColor) => {
+    // console.log(e.target.className.split("-")[1]);
+    props.setCurrentCellColor(newColor);
   };
 
   const clickHandler = (e) => {
@@ -24,10 +24,22 @@ const Navbar = (props) => {
       <Button buttonText="NEW WEEK" />
       <Button style="timer-btn" buttonText="TIMER" onClick={clickHandler} />
       <label className="navLabel">Cell Color: </label>
-      <span onClick={handleColorChangeClick} className="pick-orangered"></span>
-      <span onClick={handleColorChangeClick} className="pick-yellow"></span>
-      <span onClick={handleColorChangeClick} className="pick-cyan"></span>
-      <span onClick={handleColorChangeClick} className="pick-gray"></span>
+      <span
+        onClick={() => handleColorChangeClick("orangered")}
+        className="pick-orangered"
+      ></span>
+      <span
+        onClick={() => handleColorChangeClick("yellow")}
+        className="pick-yellow"
+      ></span>
+      <span
+        onClick={() => handleColorChangeClick("cyan")}
+        className="pick-cyan"
+      ></span>
+      <span
+        onClick={() => handleColorChangeClick("gray")}
+        className="pick-gray"
+      ></span>
       <Button style="settings-btn" buttonText="SETTINGS" />
     </>
   );
