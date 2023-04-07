@@ -7,7 +7,7 @@ import TheTable from "./components/TheTable";
 import "./styles/App.css";
 
 const App = () => {
-  const [currentCellColor, setCurrentCellColor] = useState("");
+  const [currentCellColor, setCurrentCellColor] = useState("cyan");
   return (
     <>
       <Header />
