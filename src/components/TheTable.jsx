@@ -53,6 +53,7 @@ const TheTable = (props) => {
   // *_*
 
   const handleClick = (e) => {
+    console.log(e.target.value);
     if (!e.target.bgColor) {
       e.target.bgColor = props.currentCellColor;
     } else {
@@ -84,13 +85,13 @@ const TheTable = (props) => {
             return (
               <tr>
                 <th key={ind}>{hour}</th>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
-                <td onClick={handleClick}></td>
+                <td key={ind + hour} onClick={handleClick}></td>
+                <td key={ind + hour + 1} onClick={handleClick}></td>
+                <td key={ind + hour + 2} onClick={handleClick}></td>
+                <td key={ind + hour + 3} onClick={handleClick}></td>
+                <td key={ind + hour + 4} onClick={handleClick}></td>
+                <td key={ind + hour + 5} onClick={handleClick}></td>
+                <td key={ind + hour + 6} onClick={handleClick}></td>
               </tr>
             );
           })}
