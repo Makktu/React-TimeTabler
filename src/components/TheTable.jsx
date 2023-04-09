@@ -24,10 +24,10 @@ const TheTable = (props) => {
   const theDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   useEffect(() => {
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-      addText(e);
-    });
+    // document.addEventListener("contextmenu", function (e) {
+    //   e.preventDefault();
+    //   addText(e);
+    // });
     // identify day of the week and highlight it
     const weekday = [
       "Sunday",
@@ -44,8 +44,10 @@ const TheTable = (props) => {
     todayColumn.classList.add("today");
   }, []);
 
-  const addText = (e) => {
+  const rightClickHandler = (e) => {
     // check that the right-click is on a timetable cell -- if not, ignore it
+    e.preventDefault();
+    console.log(e.target.innerText);
     let newText = prompt("Add text");
     e.target.innerText = newText;
   };
@@ -85,13 +87,41 @@ const TheTable = (props) => {
             return (
               <tr>
                 <th key={ind}>{hour}</th>
-                <td key={ind + hour} onClick={handleClick}></td>
-                <td key={ind + hour + 1} onClick={handleClick}></td>
-                <td key={ind + hour + 2} onClick={handleClick}></td>
-                <td key={ind + hour + 3} onClick={handleClick}></td>
-                <td key={ind + hour + 4} onClick={handleClick}></td>
-                <td key={ind + hour + 5} onClick={handleClick}></td>
-                <td key={ind + hour + 6} onClick={handleClick}></td>
+                <td
+                  key={ind + hour}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 1}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 2}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 3}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 4}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 5}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
+                <td
+                  key={ind + hour + 6}
+                  onClick={handleClick}
+                  onContextMenu={rightClickHandler}
+                ></td>
               </tr>
             );
           })}
