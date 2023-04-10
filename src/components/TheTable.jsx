@@ -45,11 +45,13 @@ const TheTable = (props) => {
   }, []);
 
   const rightClickHandler = (e) => {
-    // check that the right-click is on a timetable cell -- if not, ignore it
     e.preventDefault();
-    console.log(e.target.innerText);
-    let newText = prompt("Add text");
-    e.target.innerText = newText;
+    if (e.target.innerText) {
+      e.target.innerText = "";
+    } else {
+      let newText = prompt("Add text");
+      e.target.innerText = newText.toUpperCase();
+    }
   };
 
   // *_*
